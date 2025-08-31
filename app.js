@@ -1,7 +1,10 @@
 let amigo = [];
 function adicionarAmigo() {
     let nome = document.getElementById("nome").value;
-    if (nome.trim() === "") return; // Evita adicionar vazio
+    if (nome.trim() === "") {
+        alert("Por favor, insira um nome");
+        return;
+    }
     amigo.push(nome); 
     document.getElementById("nome").value = "";
     atualizarLista();
