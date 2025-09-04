@@ -19,3 +19,13 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+
+function sortearAmigo() {
+    if (amigo.length < 2) {
+        alert("Adicione pelo menos dois amigos para sortear");
+        return;
+    }
+    let indice = Math.floor(Math.random() * amigo.length);
+    let nomeSorteado = amigo[indice];
+    alert("O amigo sorteado foi: " + nomeSorteado);
+}
